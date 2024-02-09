@@ -9,8 +9,8 @@ jobs:
       - name: Node Js Installation
         uses: actions/setup-node@v4
         with:
-          node-version: '18.0'
-      - name: 'Install Dependencies'
-        runs: npm install
-      - name: 'Creating a Build'
-        runs: npm run build
+          node-version: 18.0
+      - name: Install Dependencies
+        run: npm install
+      - name: Creating a Build
+        run: npm run build
