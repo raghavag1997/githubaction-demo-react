@@ -32,3 +32,5 @@ jobs:
           docker push 975049984328.dkr.ecr.us-east-1.amazonaws.com/testimages:v1
       - name: Update kube config
         run: aws eks update-kubeconfig --name raghaveks --region $AWS_REGION
+      - name: Deploy to eks
+        run: kubectl apply -f deploy.yml
