@@ -1,5 +1,5 @@
 name: React App Test and Deploy
-on: push
+on: [ push, workflow_dispatch ]
 jobs:
   Build:
     runs-on: ubuntu-latest
