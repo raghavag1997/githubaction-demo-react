@@ -20,5 +20,7 @@ jobs:
           registry: 975049984328.dkr.ecr.us-east-1.amazonaws.com
           username: ${{ secrets.AWS_ACCESS_KEY_ID }}
           password: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Craeting Docker Image
-        run: docker build -t mytestimage:v1 .
+      - name: Creating and Pushing Docker Image
+        run: | 
+          docker build -t 975049984328.dkr.ecr.us-east-1.amazonaws.com/testimages:v1 .
+          docker push 975049984328.dkr.ecr.us-east-1.amazonaws.com/testimages:v1
